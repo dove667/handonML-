@@ -1,13 +1,13 @@
 # handonML-
-Learn to use scikict-learn, pytorch and etc through hand on practice and projects
+这是本人在25spring写得学习笔记，适合对机器学习、深度学习及其各种python库有一定了解但是缺乏代码和实战经验朋友，通过由简至难的项目掌握sklearn、pytorch、etc.
 ---
 
 ## 📋 项目结构
 
 ```text
 ├── data/                  # 各阶段示例数据集
-│   ├── iris/              # Phase I 示例：鸢尾花
-│   ├── boston/            # Phase I 示例：波士顿房价
+│   ├── Adult/              # Phase I 示例：Adult
+│   ├── California/            # Phase I 示例：加利福尼亚房价
 │   ├── titanic/           # Phase II 示例：泰坦尼克生存预测
 │   ├── cifar10/           # Phase II 示例：CIFAR-10
 │   ├── imdb/              # Phase II 示例：IMDB 影评
@@ -38,23 +38,38 @@ Learn to use scikict-learn, pytorch and etc through hand on practice and project
 
 ### Phase I：基础巩固与工具熟练（Day 1–7）
 - **Day 0（可选）**：环境搭建与依赖安装
-- **Day 1–2**：数据预处理（`SimpleImputer`, `StandardScaler`, `OneHotEncoder`）、`train_test_split`、`LogisticRegression` + `classification_report`；任务：`iris` 分类（准确率 >95%）
-- **Day 3**：`LinearRegression`, `DecisionTreeRegressor`, `cross_val_score`, `GridSearchCV`；任务：波士顿回归（R² >0.7）
-- **Day 4–5**：PyTorch 张量、`.cuda()`, `autograd.backward()`；手写线性回归对比 scikit-learn
-- **Day 6–7**：`nn.Module`, `nn.Linear`, `ReLU`, `MSELoss`, `Adam`；任务：2层 MLP on MNIST（准确率 >85%）
+- **Day 1–2**：数据预处理（`SimpleImputer`, `StandardScaler`, `OneHotEncoder`）、`train_test_split`、`LogisticRegression` + `classification_report`；任务：UCI`Adult`数据集 预测收入 >50K 或 <=50K（准确率 >70%）
+
+- **Day 3**：`LinearRegression`, `DecisionTreeRegressor`, `cross_val_score`, `GridSearchCV`；任务：`California Housing`，目标 R² >0.7。
+
+- **Day 4–5**：PyTorch 张量、`.cuda()`, `autograd.backward()`；
+没有GPU移步致kaggle notebook或者colab  
+
+- **Day 6–7**：`nn.Module`, `nn.Linear`, `ReLU`, `MSELoss`, `Adam`；任务：2层 MLP on MNIST（准确率 >85%） 
 
 ### Phase II：核心功能实战（Day 8–21）
-- **Day 8–10**：`SelectKBest`, `PCA`, `RandomForestClassifier`, `GradientBoostingClassifier`；任务：Titanic 生存预测（准确率 ≥80%）
-- **Day 11–12**：`Pipeline`, `joblib`, ONNX 导出；任务：构建可复用预测管道
-- **Day 13–15**：`nn.Conv2d`, `MaxPool2d`, 数据增强；任务：CIFAR-10 上训练 ResNet18（准确率 ≥90%）
-- **Day 16–18**：`nn.LSTM`, `nn.Embedding`；任务：IMDB 情感分类
+- **Day 8–10**：`SelectKBest`, `PCA`, `RandomForestClassifier`, `GradientBoostingClassifier`；任务：Titanic 生存预测（准确率 ≥80%），使用 KMeans 对 iris 数据集进行聚类并可视化结果。
+
+- **Day 11–12**：`Pipeline`, `joblib`, ONNX 导出；任务：构建可复用预测管道  
+
+- **Day 13–15**：`nn.Conv2d`, `MaxPool2d`, 数据增强；任务：在 CIFAR-10 上训练一个简单 CNN，目标准确率 ≥70%。  
+
+进阶尝试 ResNet18，目标准确率 ≥90%。
+
+- **Day 16–18**：`nn.LSTM`, `nn.Embedding`；任务：IMDB 情感分类  
+
 - **Day 19–21**：`lr_scheduler`, `torch.cuda.amp`, TensorBoard；任务：对 CNN/RNN 模型进行优化与可视化
 
-### Phase III：综合项目与高阶技能（Day 22–30）
-- **Day 22–24**：YOLOv5 目标检测；任务：自定义数据集（如车辆），mAP ≥0.7
-- **Day 25–27**：DCGAN 生成对抗网络；任务：生成高质量动漫头像
-- **Day 28**：TorchScript & ONNX 模型部署
-- **Day 29**：`torch.profiler` 性能分析与显存瓶颈优化
-- **Day 30**：整理代码至 GitHub，撰写项目文档，规划后续（强化学习、AutoML）
+### Phase III：综合项目与高阶技能（Day 22–30） 
+- **Day 22–24**：`YOLOv5` 目标检测；任务：使用预训练的 YOLOv5 在 COCO 数据集上 fine-tuning，然后在自定义数据集（如车辆）上测试，目标 mAP ≥0.7。 
+
+- **Day 25–27**：`DCGAN` 生成对抗网络；任务：使用预训练的 StyleGAN 生成高质量动漫头像
+
+- **Day 28-29**：Transformer 模型实战  
+学习 `nn.Transformer`、`nn.MultiheadAttention`、`PositionalEncoding`。了解 Hugging Face 的 Transformers 库（如 BertTokenizer、BertModel）。  
+NLP 任务：基于 Hugging Face 的预训练 BERT 模型，在 SST-2 数据集（Stanford Sentiment Treebank）上进行情感分类 fine-tuning，目标准确率 ≥90%。  
+CV 任务（可选）：使用 Vision Transformer（ViT）在 CIFAR-10 数据集上进行分类，目标准确率 ≥85%。
+
+- **Day 30**：整理代码至 GitHub，撰写项目文档，规划后续（强化学习、AutoML） 
 
 ---
