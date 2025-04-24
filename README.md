@@ -1,5 +1,10 @@
 # handonML-
-这是本人在25spring写得学习笔记，适合对机器学习、深度学习及其各种python库有一定了解但是缺乏代码和实战经验朋友，通过由简至难的项目掌握sklearn、pytorch、etc.
+这是本人在25spring写的学习笔记兼实战项目，当时我已经对ML、DL理论有了比较深入的了解，但是一直找不到好的方法练习具体的代码实现：读官方文档效率太低，犹如大海捞针，网上优质视频也不多，而且学习写代码最重要的是自己动手写。  
+
+本项目涵盖了数据集下载、清洗、预处理，模型流水线的搭建、训练和评估一整套流程，notebook中穿插了我自己写代码的时候debug过程中的血泪教训和总结，scripts中包含完整的代码实现。  
+
+本项目适合对机器学习、深度学习及其各种python库有一定了解的朋友，通过由简至难的项目掌握sklearn、xgboost、pytorch等包中的基本使用方法和部分进阶技巧。希望能帮助到你。
+
 ---
 
 ## 📋 项目结构
@@ -7,18 +12,16 @@
 ```text
 ├── data/                  # 各阶段示例数据集
 │   ├── Adult/              # Phase I 示例：Adult
-│   ├── California/            # Phase I 示例：加利福尼亚房价
-│   ├── titanic/           # Phase II 示例：泰坦尼克生存预测
+│   ├── California/            # Phase I 示例：加利福尼亚价
+│   ├── titanic/           # Phase II 示例：泰坦尼克生存测
 │   ├── cifar10/           # Phase II 示例：CIFAR-10
 │   ├── imdb/              # Phase II 示例：IMDB 影评
 │   └── custom_detection/  # Phase III 示例：目标检测
 │
-├── notebooks/             # 配套 Jupyter Notebook（按天命名）
+├── notebooks/             # 配套 Jupyter Notebook
 │
 ├── scripts/               # Python 脚本（数据预处理、模型训练、评估）
-│   ├── phase1/            # Phase I 脚本
-│   ├── phase2/            # Phase II 脚本
-│   └── phase3/            # Phase III 脚本
+│   ├── ...           
 │
 ├── requirements.txt       # 依赖列表（scikit-learn, torch, torchvision, ...）
 ├── README.md              # 本文件

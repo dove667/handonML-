@@ -3,8 +3,8 @@
 ## Phase I: 基础巩固
 - [√] Day 0（可选）：环境搭建与依赖安装
 - [√] Day 1: Adult 数据预处理 + LogisticRegression（准确率 >70%）
-- [ ] Day 2: Adult 模型评估 & 结果可视化
-- [ ] Day 3: California Housing 回归 + GridSearchCV（目标 R² >0.7）
+- [√] Day 2: Adult 模型评估 & 结果可视化
+- [√] Day 3: California Housing 回归 + GridSearchCV（目标 R² >0.7）
 - [ ] Day 4: PyTorch 张量操作 & GPU 加速
 - [ ] Day 5: PyTorch autograd 与 backward() 实验
 - [ ] Day 6: 2层 MLP on MNIST 架构搭建
