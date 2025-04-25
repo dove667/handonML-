@@ -45,8 +45,7 @@
 
 - **Day 3**：`LinearRegression`, `DecisionTreeRegressor`, `cross_val_score`, `GridSearchCV`；任务：`California Housing`，目标 R² >0.7。
 
-- **Day 4–5**：PyTorch 张量、`.cuda()`, `autograd.backward()`；
-没有GPU移步致kaggle notebook或者colab  
+- **Day 4–5**：PyTorch 张量、torch.nn, `torch.optim`, `torch.utils.data`；
 
 - **Day 6–7**：`nn.Module`, `nn.Linear`, `ReLU`, `MSELoss`, `Adam`；任务：2层 MLP on MNIST（准确率 >85%） 
 
