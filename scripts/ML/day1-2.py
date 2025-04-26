@@ -14,8 +14,8 @@ logging.basicConfig(level=logging.INFO)
 
 def load_data():
     """读取数据并预处理目标列的格式"""
-    X = pd.read_csv('~/handonML/handonML-/data/Adult/X.csv')
-    y = pd.read_csv('~/handonML/handonML-/data/Adult/y.csv')
+    X = pd.read_csv('../../data/Adult/X.csv')
+    y = pd.read_csv('../../data/Adult/y.csv')
     # 数据清洗：去除首尾空格和末尾句点
     y_series = y.iloc[:, 0].str.strip().str.replace(r'\.$', '', regex=True)
     return X, y_series
