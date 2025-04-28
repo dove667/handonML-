@@ -47,10 +47,12 @@
   * 优化：`cross_val_score`, `GridSearchCV`
   * 实战：California Housing 房价预测 (目标 R² >0.7)
 
-* **Day 5-7**：聚类与降维
-  * 特征： `PCA`
+* **Day 5-6**：聚类与降维
+  * 降维：`PCA`
   * 模型：`KMeans` `GMM` `SpectralClustering`
   * 实战：MNIST 手写数字聚类与可视化（KMeans 聚类，t-SNE/PCA 可视化，评估聚类效果）
+  
+* **Day 7**： `SVC` `SVR` 模型训练与评估
 
 ## Phase II：深度学习实战 (Week 2-4)
 

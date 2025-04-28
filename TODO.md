@@ -8,7 +8,7 @@
 - [√] Day 4: California Housing + XGBoostRegressor + RandomizedSearchCV
 - [√] Day 5: 特征选择, PCA & MNIST 分类 
 - [√] Day 6: KMeans 聚类 & MNIST 可视化
-- [ ] Day 7: Pipeline 打包预处理与模型构建
+- [√] Day 7: SVC&SVR 模型与对比
 
 ## Phase II: 深度学习实战
 - [ ] Day 8: PyTorch 张量操作 & GPU 加速
