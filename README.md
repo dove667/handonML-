@@ -1,9 +1,9 @@
 # handonML
-这是本人在25spring写的学习笔记兼实战项目，当时我已经对ML、DL理论有了比较深入的了解，但是一直找不到好的方法练习具体的代码实现：读官方文档效率太低，犹如大海捞针，网上优质视频也不多，而且学习写代码最重要的是自己动手写。  
+这是本人在25spring写的学习笔记兼实战项目，当时我已经对ML、DL理论有了比较深入的了解，但是一直找不到好的方法练习具体的代码实现：读官方文档效率太低，网上优质视频也不多，而且我觉得学习写代码最重要的是自己动手写。  
 
-本项目涵盖了数据集下载、清洗、预处理，模型流水线的搭建、训练和评估一整套流程，notebook中穿插了我自己写代码的时候debug过程中的血泪教训和总结，scripts中包含完整的代码实现。  
+本项目涵盖了数据集下载、清洗、预处理，模型流水线的搭建、训练和评估一整套流程，涵盖了sklearn中大部分常用的API和常用的回归、分类、聚类、降维模型。notebook中穿插了我自己写代码的时候debug过程中的血泪教训和总结，探索过程都保留了下来，会显得有些乱。scripts中包含了对应天数的优化训练脚本。  
 
-本项目适合对机器学习、深度学习及其各种python库有一定了解的朋友，通过由简至难的项目掌握sklearn、xgboost、pytorch等包中的基本使用方法和部分进阶技巧。
+本项目适合对机器学习、深度学习及其各种python库有一定了解的朋友，通过由简至难的项目掌握sklearn、pytorch中的基本使用方法和部分进阶技巧。
 
 ---
 
@@ -11,8 +11,8 @@
 
 ```text
 ├── data/                  # 各阶段示例数据集
-│   ├── Adult/              # Phase I 示例：Adult
-│   ├── California/            # Phase I 示例：加利福尼亚价
+│   ├── Adult/             # Phase I 示例：Adult
+│   ├── California/        # Phase I 示例：加利福尼亚价
 │   ├── titanic/           # Phase II 示例：泰坦尼克生存测
 │   ├── cifar10/           # Phase II 示例：CIFAR-10
 │   ├── imdb/              # Phase II 示例：IMDB 影评
@@ -20,8 +20,9 @@
 │
 ├── notebooks/             # 配套 Jupyter Notebook
 │
-├── scripts/BestPractise   # Python 脚本（数据预处理、模型训练、评估）
-│   ├── ...           
+├── scripts/   # Python 脚本（数据预处理、模型训练、评估）
+│   ├── ML/
+|   ├── DL/
 │
 ├── requirements.txt       # 依赖列表（scikit-learn, torch, torchvision, ...）
 ├── README.md              # 本文件
@@ -52,18 +53,19 @@
   * 模型：`KMeans` `GMM` `SpectralClustering`
   * 实战：MNIST 手写数字聚类与可视化（KMeans 聚类，t-SNE/PCA 可视化，评估聚类效果）
   
-* **Day 7**： `SVC` `SVR` 模型训练与评估
+* **Day 7**： `SVC` `SVR` 比较分析支持向量机的特点
 
 ## Phase II：深度学习实战 (Week 2-4)
 
 ### Week 2: PyTorch 基础与 MLP (Day 8-14)
-* **Day 8-9**：PyTorch 张量操作 & GPU 加速
-* **Day 10**：torch.nn/optim/utils.data 基础操作
-* **Day 11**：2层 MLP on MNIST 架构搭建
-* **Day 12**：MLP 训练 & 精度评估（准确率>90%）
-* **Day 13**：模型导出（joblib + ONNX）
+> [pytorch4h速通 youtube](https://www.youtube.com/watch?v=EMXfZB8FVUA&list=PLqnslRFeH2UrcDBWF5mfPGpqQDSta6VK4&index=1)   
+* **Day 8**：`tensor` & `autograd` & `cuda` 
+* **Day 9** `nn.Module` / `optim `/ `Dataset` / `DataLoader` / `onnx` / `tensorboard`
+* **Day 10**：MLP on MNIST 架构搭建 & 训练 & 精度评估（准确率>90%）
+* **Day 12**：模型导出（joblib + ONNX）
+* **Day 13**：
 
-### Week 3: 卷积神经网络与进阶 (Day 15-21)
+### Week 3: CNN、RNN (Day 15-21)
 * **Day 14-16**：简单 CNN on CIFAR10 架构搭建与训练（目标准确率 ≥70%）
 * **Day 17**：模型评估 & 调优（进阶尝试 ResNet18，目标准确率 ≥90%）
 * **Day 18**：LSTM 文本分类数据预处理
