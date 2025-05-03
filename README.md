@@ -55,44 +55,47 @@
   
 * **Day 7**： `SVC` `SVR` 比较分析支持向量机的特点
 
-## Phase II：深度学习实战 (Week 2-4)
+## Phase II：深度学习实战 (Week 2-3)
 
-### Week 2: PyTorch 基础与 MLP (Day 8-14)
+### Week 2: PyTorch 基础与 经典网络架构 (Day 8-14)
 > [pytorch4h速通 youtube](https://www.youtube.com/watch?v=EMXfZB8FVUA&list=PLqnslRFeH2UrcDBWF5mfPGpqQDSta6VK4&index=1)   
-* **Day 8**：`tensor` & `autograd` & `cuda` 
-* **Day 9** `nn.Module` / `optim `/ `Dataset` / `DataLoader` / `onnx` / `tensorboard`
+* **Day 8**：`tensor` & `autograd` & `cuda` &  `Dataset` & `DataLoader`
+* **Day 9** `nn.Module` / `optim ` / `onnx` / `tensorboard`
 * **Day 10**：MLP on MNIST 架构搭建 & 训练 & 精度评估（准确率>90%）
-* **Day 12**：模型导出（joblib + ONNX）
-* **Day 13**：
+* **Day 11**：简单 CNN on CIFAR10 架构搭建与训练（目标准确率 ≥70%）
+* **Day 12**：简单 RNN on IMDB 情感分类 (目标准确率 ≥80%)
+* **Day 13**：模型导出（joblib + ONNX）
 
-### Week 3: CNN、RNN (Day 15-21)
-* **Day 14-16**：简单 CNN on CIFAR10 架构搭建与训练（目标准确率 ≥70%）
-* **Day 17**：模型评估 & 调优（进阶尝试 ResNet18，目标准确率 ≥90%）
-* **Day 18**：LSTM 文本分类数据预处理
-* **Day 19**：LSTM 模型搭建与训练
-* **Day 20**：IMDB 精度评估
-* **Day 21**：学习率调度、混合精度训练、TensorBoard 可视化、复盘 & 文档
+### Week 3: 先进网络架构 & transformer (Day 15-21)
+> 本周聚焦 Huggingface Transformers 框架，深入理解 BERT、Vision Transformer (ViT)、Prompt Engineering、微调（Fine-tuning）、轻量化方法（如LoRA原理）等。
 
-## Phase III：综合项目与前沿探索 (Week 4+)
+* **Day 15**：Huggingface Transformers 基础（模型加载、Tokenizer、Pipeline 快速推理）
+* **Day 16**：BERT 文本分类实战（SST-2/IMDB，微调与评估，目标准确率≥85%）
+* **Day 17**：Prompt Engineering 入门（Zero-shot/Prompt-based 分类、文本生成）
+* **Day 18**：Vision Transformer (ViT) on CIFAR-10（微调与评估，目标准确率≥85%）
+* **Day 19**：轻量化微调方法原理（LoRA/Adapter 理论，CPU 上小模型实验）
+* **Day 20**：Huggingface Datasets & Trainer API 进阶（自定义数据集、训练流程）
+* **Day 21**：总结复盘 & 代码整理，撰写 transformer 应用经验文档
 
-* **Day 22-24**：自定义目标检测数据预处理 & YOLOv5 训练脚本（目标 mAP ≥0.7）
-* **Day 25**：YOLOv5 fine-tuning & 调优
-* **Day 26-27**：DCGAN 架构搭建、训练 & 生成样本，StyleGAN 进阶
-* **Day 28**：Transformer 基础（nn.Transformer, MultiheadAttention 等）
-* **Day 29**：Hugging Face Transformers/BERT/ViT 实战（如BERT fine-tuning on SST-2, ViT on CIFAR-10，准确率≥85%/90%）
-* **Day 30**：整理代码至 GitHub，撰写项目文档 & 后续规划（强化学习、AutoML）
+## Phase III：综合项目与前沿探索 (Week 4)
+
+> 本阶段聚焦真实场景下的综合应用与前沿探索，涵盖文本/图像生成、微调、轻量化部署、RLHF、AutoML 等。
+
+* **Day 22-23**：文本生成/摘要/问答系统（基于 Huggingface Pipeline，尝试 T5/BART/DistilGPT2 等小模型）
+* **Day 24-25**：图像分类/检索/生成（ViT 微调、Diffusers 文生图小模型实验）
+* **Day 26**：LoRA/Adapter 微调小模型实战（如 DistilBERT/DistilGPT2）
+* **Day 27**：AutoML/轻量化部署（Optuna 超参搜索、ONNX 导出、CPU 推理优化）
+* **Day 28**：RLHF 理论与小规模实验（如 reward model 微调、数据构造流程）
+* **Day 29**：综合项目：端到端文本/图像智能应用（如“智能摘要+检索”或“文本生成+情感分析”一体化系统）
+* **Day 30**：整理代码至 GitHub，撰写项目文档 & 后续规划（如强化学习、MLOps、AIGC 等）
 
 ## 📈 项目里程碑
 
 | 周数  | 主要目标 | 验收标准 |
 |-------|---------|----------|
-| Week 1 | 机器学习基础 | Adult 数据集准确率 >70%<br>California Housing R² >0.7 |
-| Week 2 | PyTorch 基础 | MNIST 分类准确率 >90% |
-| Week 3 | CNN & RNN | CIFAR-10 ≥75%，IMDB ≥85% |
-| Week 4+ | 综合/前沿 | YOLOv5/Transformer/BERT/ViT 等前沿模型实战 |
-
----
-
-- **Day 30**：整理代码至 GitHub，撰写项目文档，规划后续（强化学习、AutoML） 
+| Week 1 | 机器学习基础 | Adult 收入预测acc >70%<br>California Housing 房价预测 R² >0.7 |
+| Week 2 | PyTorch 基础 | MNIST 数字分类acc >90% <br> CIFAR10 对象分类 acc>70% <br> IMDB 情感分类 acc >80%
+| Week 3 | Transformer & 先进网络 | BERT/ViT 微调准确率 ≥85%，Prompt/LoRA 理论与实验 |
+| Week 4+ | 综合/前沿 | 文本/图像生成、LoRA 微调、AutoML、RLHF 等前沿项目实战 |
 
 ---
