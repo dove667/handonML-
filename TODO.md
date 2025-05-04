@@ -15,8 +15,8 @@
 - [√] Day 9: torch.nn/optim/utils.data 等核心模块
 - [√] Day 10: 2层 MLP on MNIST 架构搭建&训练 & 精度评估（准确率>90%）
 - [√] Day 11: 简单 CNN on CIFAR10 架构搭建与训练（目标准确率 ≥70%）
-- [ ] Day 12: 简单 RNN on IMDB 情感分类 (目标准确率 ≥80%)
-- [ ] Day 13: 模型导出（joblib + ONNX）
+- [√] Day 12: LSTM RNN on IMDB 情感分类 (目标准确率 ≥80%)
+- [√] Day 13: 模型可视化（tensorboard）、模型导出（joblib + ONNX）
 
 - [ ] Day 15: 模型评估 & 调优（进阶尝试 ResNet18，目标准确率 ≥90%）
 - [ ] Day 16: Huggingface Transformers 基础（模型加载、Tokenizer、Pipeline 快速推理）
