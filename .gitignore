@@ -1,0 +1,24 @@
+# 忽略 runs 目录下的所有文件，但保留目录本身
+runs/*/*/*
+runs/*/*/ 
+!runs/*/
+!runs/*/.gitkeep
+
+# 忽略 model 目录下的所有文件，但保留目录本身
+model/*/*.pth
+model/*/*
+!model/**/
+!model/*/.gitkeep
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Jupyter Notebook
+.ipynb_checkpoints
