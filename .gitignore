@@ -10,6 +10,9 @@ model/*/*
 !model/**/
 !model/*/.gitkeep
 
+# 忽略 notebooks 目录下的缓存文件
+notebooks/hf_cache
+
 # Python
 __pycache__/
 *.py[cod]
