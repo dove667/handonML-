@@ -74,11 +74,11 @@ notebook中穿插了我写代码的时候debug过程中的血泪教训和总结�
 > 本周聚焦 Huggingface Transformers 框架，深入理解 BERT、Vision Transformer (ViT)、Prompt Engineering、微调（Fine-tuning）、轻量化方法（如LoRA原理）等。
 
 * **Day 15**：Huggingface Transformers 基础（模型加载、Tokenizer、Pipeline 快速推理）
-* **Day 16**：BERT 文本分类实战（SST-2/IMDB，微调与评估，目标准确率≥85%）
-* **Day 17**：Prompt Engineering 入门（Zero-shot/Prompt-based 分类、文本生成）
-* **Day 18**：Vision Transformer (ViT) on CIFAR-10（微调与评估，目标准确率≥85%）
-* **Day 19**：预训练大模型，轻量化微调方法原理（LoRA/Adapter 理论，CPU 上小模型实验），量化
-* **Day 20**：Huggingface Datasets & Trainer API 进阶（自定义数据集、训练流程）
+* **Day 16（gpu）**：Huggingface Datasets & Trainer API 进阶（自定义数据集、训练流程）
+* **Day 17**：BERT 文本分类实战（SST-2/IMDB，微调与评估，目标准确率≥85%）
+* **Day 18**：Prompt Engineering 入门（Zero-shot/Prompt-based 分类、文本生成）
+* **Day 19**：Vision Transformer (ViT) on CIFAR-10（微调与评估，目标准确率≥85%）
+* **Day 20**：预训练大模型，轻量化微调方法原理（LoRA/Adapter 理论，CPU 上小模型实验），量化
 * **Day 21**：总结复盘 & 代码整理，撰写 transformer 应用经验文档
 
 ## Phase III：综合项目与前沿探索 (Week 4)
