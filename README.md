@@ -1,15 +1,15 @@
 # handonML
-这是本人在25spring写的学习笔记兼实战项目。当时我已经对ML、DL理论有了比较深入的了解，但是一直找不到好的方法练习具体的代码实现：读官方文档效率太低，网上优质视频也不多，于是决定自己边写边学。
+这是本人在25spring写的学习笔记兼实战项目。当时我已经对ML、DL理论有了比较深入的了解，但是一直找不到好的方法练习具体的代码实现：读官方文档效率太低，网上优质视频也不多，（打脸，后面有优质视频推荐）于是决定自己边写边学。
 
 本项目涵盖了数据集加载、清洗、预处理，模型流水线的搭建、训练和评估，模型保存和导出、部署等一整套流程。内容包括但不限于：   
 - sklearn中大部分常用的API和常用的回归、分类、聚类模型和数据降维、评估metric   
-- 使用pytorch从0实现的MLP，CNNs，RNNs小型神经网络  
-- 基于huggingface的transformer家族：使用预训练模型（BERT）做迁移学习，hf的常用API，提示词工程（promt engineering），高效微调（PEFT）
+- 使用pytorch从0实现的MLP，CNNs，LSTM小型神经网络  
+- 基于huggingface的transformer家族：使用预训练模型（BERT）做迁移学习，huggingface的常用的model、tokenizer、pipeline、trainer等API，提示词工程（promt engineering），高效微调（PEFT）
 
 notebook中穿插了我写代码的时候debug过程中的血泪教训和总结，特别是在不熟悉api使用规范的时候（PhaseⅠ）。因此jupyter中的代码有些散乱，我按照天数整合到了scripts中，尽量向论文提供的优质脚本靠近。
 
 最后是关于设备。我的机器环境是windows的wsl ubuntu，cpu是CORE i5，没有独立显卡。
-cpu运行sklearn中的传统机器学习模型绰绰有余，小型深度学习模型也是可以训练几个epoch的。我的wsl最大内存大约是8G，不精确估计能加载并推理的最大模型参数量约为1B（FP32）。微调大模型不要用cpu。涉及微调大模型的章节我在下面的**学习规划详情**中备注上了（gpu）。
+cpu运行sklearn中的传统机器学习模型绰绰有余，小型深度学习模型也是可以训练几个epoch的。我的wsl最大内存大约是8G，不精确估计能加载并推理的最大模型参数量约为1B（FP32）。微调模型不要用cpu。涉及微调大模型的章节我在下面的**学习规划详情**中备注上了（gpu）。
 
 ---
 
@@ -80,7 +80,11 @@ cpu运行sklearn中的传统机器学习模型绰绰有余，小型深度学习�
 `Pipeline`,`AutoTokenizer`,`AutoModel`    
 * **Day 16（gpu）**：Huggingface Datasets & Trainer API 进阶
 `load_dataset`, `DataCollatorWithPadding`, `TrainingArguments`, `Trainer`,`evaluate`,`tqdm`
-* **Day 17**：BERT 文本分类实战（SST-2/IMDB，微调与评估，目标准确率≥85%）
+* **Day 17（gpu）**：BERT多任务微调实战
+  - 在GLUE benchmark上进行多任务微调(MNLI/QQP/SST-2)
+  - 实现任务间的知识迁移和参数共享
+  - 对比单任务vs多任务性能
+  - 目标：MNLI准确率≥82%，QQP F1≥85%，SST-2准确率≥90%
 * **Day 18**：Prompt Engineering 入门（Zero-shot/Prompt-based 分类、文本生成）
 * **Day 19**：Vision Transformer (ViT) on CIFAR-10（微调与评估，目标准确率≥85%）
 * **Day 20**：预训练大模型，轻量化微调方法原理（LoRA/Adapter 理论，CPU 上小模型实验），量化
