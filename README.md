@@ -21,19 +21,23 @@ cpu运行sklearn中的传统机器学习模型绰绰有余，小型深度学习�
 │   ├── California/        
 │   ├── MNIST/             
 │   ├── cifar10/           
-│   ├── imdb/              
+│   ├── MNIST/              
 │   └── 
+│
+├── images/                # notebook中的图片
 │
 ├── notebooks/             # Jupyter Notebook
 │
-├── scripts/   # Python 脚本
+├── scripts/               # 训练脚本
 │   ├── ML/
 |   ├── DL/
 │
-├── requirements.txt       # 依赖列表（scikit-learn, torch, torchvision, ...）
+├── requirements.txt       # 依赖列表（scikit-learn, torch, torchvision, ...），torch相关包自行在官网安装
 ├── README.md              # 本文件
 ├── TODO.md                # 详细每日待办清单
-└── runs/                  # 训练日志                  
+├──runs/                   # tensorboard训练日志
+├──model/                  # 模型训练保存的checkpoint
+└──handonML.tar.gz         # 项目压缩包，上传服务器用
 ```
 
 ---
