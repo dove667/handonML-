@@ -84,11 +84,7 @@ cpu运行sklearn中的传统机器学习模型绰绰有余，小型深度学习�
 `Pipeline`,`AutoTokenizer`,`AutoModel`    
 * **Day 16（gpu）**：Huggingface Datasets & Trainer API 进阶
 `load_dataset`, `DataCollatorWithPadding`, `TrainingArguments`, `Trainer`,`evaluate`,`tqdm`
-* **Day 17（gpu）**：BERT多任务微调实战
-  - 在GLUE benchmark上进行多任务微调(MNLI/QQP/SST-2)
-  - 实现任务间的知识迁移和参数共享
-  - 对比单任务vs多任务性能
-  - 目标：MNLI准确率≥82%，QQP F1≥85%，SST-2准确率≥90%
+* **Day 17（gpu）**： 在SQuAD 问答任务微调bert
 * **Day 18**：Prompt Engineering 入门（Zero-shot/Prompt-based 分类、文本生成）
 * **Day 19**：Vision Transformer (ViT) on CIFAR-10（微调与评估，目标准确率≥85%）
 * **Day 20**：预训练大模型，轻量化微调方法原理（LoRA/Adapter 理论，CPU 上小模型实验），量化
