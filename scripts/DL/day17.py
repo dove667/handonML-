@@ -1,7 +1,7 @@
 import torch
 import argparse
 from transformers import BertTokenizer, BertForQuestionAnswering, Trainer, TrainingArguments, default_data_collator
-from datasets import load_dataset, load_metric
+from datasets import load_dataset
 import numpy as np
 import os
 from tqdm.auto import tqdm
@@ -26,10 +26,10 @@ def main():
                         help="当文档过长时，分割成较短片段时的步长。")
 
     args = parser.parse_args()
-
-    # 定义 checkpoint 输出目录，根据用户要求设置为 ../../model/
-    # Trainer 会在此目录下创建子目录，如 ../../model/Bert/checkpoint-step_number
-    output_dir = "../../../model/Bert/"
+    
+    output_dir = "model/Bert/"
+    if not os.path.exists(output_dir):
+        os.makedirs(output_dir)
 
     # 1. 数据加载与探索
     print("正在加载数据集...")
@@ -197,7 +197,7 @@ def main():
         per_device_eval_batch_size=args.eval_batch_size,   # 评估时每个设备的批次大小
         warmup_steps=500,                # 学习率调度器的预热步数
         weight_decay=0.01,               # 权重衰减强度
-        logging_dir="../../runs/Bert",   # 日志存储目录
+        logging_dir="runs/Bert",         # 日志存储目录
         logging_steps=10,                # 每隔多少步记录一次日志
         evaluation_strategy="epoch" if args.mode == "train" else "no", # 训练模式下每个 epoch 评估一次
         save_strategy="epoch" if args.mode == "train" else "no",       # 训练模式下每个 epoch 保存一次 checkpoint

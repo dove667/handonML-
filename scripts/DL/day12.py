@@ -9,7 +9,7 @@ from tqdm import tqdm
 from torch.utils.tensorboard import SummaryWriter # 连接 PyTorch 和 TensorBoard 的桥梁
 from datetime import datetime # 动态生成时间戳
 
-log_dir = f"../../../runs/SimpleLSTM/SimpleLSTM_{datetime.now().strftime('%Y%m%d_%H%M%S')}"
+log_dir = f"runs/SimpleLSTM/SimpleLSTM_{datetime.now().strftime('%Y%m%d_%H%M%S')}"
 writer = SummaryWriter(log_dir=log_dir) # 创建一个 SummaryWriter 对象，用于记录训练过程中的信息
 
 # 参数设置
@@ -112,7 +112,7 @@ def train(model, train_dataloader, valid_dataloader, optimizer, criterion, devic
                 'loss': valid_loss,
                 'acc': valid_acc
             }
-            torch.save(checkpoint, f'../../../model/SimpleLSTM/checkpoint_{epoch+1}.pth')
+            torch.save(checkpoint, f'model/SimpleLSTM/checkpoint_{epoch+1}.pth')
     return best_epoch
 
 def evaluate(model, iterator, criterion, device):
@@ -173,7 +173,7 @@ if __name__ == "__main__":
 
     if checkpoint_v is not None:
         print(f"Loading checkpoint_{checkpoint_v}")
-        checkpoint = torch.load(f'../../../model/SimpleLSTM/checkpoint_{checkpoint_v}.pth')
+        checkpoint = torch.load(f'model/SimpleLSTM/checkpoint_{checkpoint_v}.pth')
         model.load_state_dict(checkpoint['model_state_dict'])
         optimizer.load_state_dict(checkpoint['optimizer_state_dict'])
         start_epoch = checkpoint['epoch'] + 1
@@ -185,7 +185,7 @@ if __name__ == "__main__":
         print("start training...")
         best_epoch = train(model, train_dataloader, valid_dataloader, optimizer, criterion, device, start_epoch, epochs)
         # 加载最优模型并评估
-        checkpoint = torch.load(f'../../../model/SimpleLSTM/checkpoint_{best_epoch+1}.pth')
+        checkpoint = torch.load(f'model/SimpleLSTM/checkpoint_{best_epoch+1}.pth')
         model.load_state_dict(checkpoint['model_state_dict'])
         model.eval()
         test_loss, test_acc = evaluate(model, test_dataloader, criterion, device)
