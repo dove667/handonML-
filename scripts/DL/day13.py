@@ -10,7 +10,7 @@ from torch.utils.tensorboard import SummaryWriter # 连接 PyTorch 和 TensorBoa
 from datetime import datetime # 动态生成时间戳
 import argparse # 解析命令行参数
 
-log_dir = f"../../runs/SimpleCNN/SimpleCNN_{datetime.now().strftime('%Y%m%d_%H%M%S')}"
+log_dir = f"../../../runs/SimpleCNN/SimpleCNN_{datetime.now().strftime('%Y%m%d_%H%M%S')}"
 writer = SummaryWriter(log_dir=log_dir) # 创建一个 SummaryWriter 对象，用于记录训练过程中的信息
 
 def get_device():
@@ -146,10 +146,11 @@ def train_model(model, train_loader, val_loader, criterion, optimizer, scheduler
             checkpoint = {
                 'epoch': epoch,
                 'model_state_dict': model.state_dict(),
-                'optimizer_state_dict': optimizer.state_dict(),                    'scheduler_state_dict': scheduler.state_dict(),
+                'optimizer_state_dict': optimizer.state_dict(), 
+                'scheduler_state_dict': scheduler.state_dict(),
                 'loss': val_loss,
             }
-            torch.save(checkpoint, f'../../model/SimpleCNN/checkpoint_{epoch}.pth')
+            torch.save(checkpoint, f'../../../model/SimpleCNN/checkpoint_{epoch}.pth')
         else:
             trigger_times += 1
             if trigger_times >= patience:
@@ -228,12 +229,12 @@ if __name__ == "__main__":
         raise ValueError("checkpoint must be specified in test mode")
     elif mode == 'test' and checkpoint_v is not None:
         print(f"Loading checkpoint_{checkpoint_v} for testing")
-        checkpoint = torch.load(f'../../model/SimpleCNN/checkpoint_{checkpoint_v}.pth')
+        checkpoint = torch.load(f'../../../model/SimpleCNN/checkpoint_{checkpoint_v}.pth')
         model.load_state_dict(checkpoint['model_state_dict'])
         evaluate_model(model, test_loader, device)
     elif mode == 'train' and checkpoint_v is not None:
         print(f"Loading checkpoint_{checkpoint_v} for training")
-        checkpoint = torch.load(f'../../model/SimpleCNN/checkpoint_{checkpoint_v}.pth')
+        checkpoint = torch.load(f'../../../model/SimpleCNN/checkpoint_{checkpoint_v}.pth')
         model.load_state_dict(checkpoint['model_state_dict'])
         optimizer.load_state_dict(checkpoint['optimizer_state_dict'])
         scheduler.load_state_dict(checkpoint['scheduler_state_dict'])

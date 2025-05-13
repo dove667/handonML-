@@ -29,7 +29,7 @@ def main():
 
     # 定义 checkpoint 输出目录，根据用户要求设置为 ../../model/
     # Trainer 会在此目录下创建子目录，如 ../../model/Bert/checkpoint-step_number
-    output_dir = "../../model/Bert/"
+    output_dir = "../../../model/Bert/"
 
     # 1. 数据加载与探索
     print("正在加载数据集...")
