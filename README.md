@@ -12,17 +12,15 @@ notebook中穿插了我写代码的时候debug过程中的血泪教训和总结�
 cpu运行sklearn中的传统机器学习模型绰绰有余，小型深度学习模型也是可以训练几个epoch的。我的wsl最大内存大约是8G，不精确估计能加载并推理的最大模型参数量约为1B（FP32）。微调模型不要用cpu。涉及微调大模型的章节我在下面的**学习规划详情**中备注上了（gpu）。
 
 ---
+重要：为了让服务器存储空间不爆，更改项目结构，本仓库只包含传统ML。DL见另外一个仓库handonDL。
+---
 
 ## 📋 项目结构
 
 ```text
 ├── data/                  # 各项目数据集
 │   ├── Adult/             
-│   ├── California/        
-│   ├── MNIST/             
-│   ├── cifar10/           
-│   ├── MNIST/              
-│   └── 
+│   ├── California/                    
 │
 ├── images/                # notebook中的图片
 │
@@ -30,20 +28,15 @@ cpu运行sklearn中的传统机器学习模型绰绰有余，小型深度学习�
 │
 ├── scripts/               # 训练脚本
 │   ├── ML/
-|   ├── DL/
-│
-├── requirements.txt       # 依赖列表（scikit-learn, torch, torchvision, ...），torch相关包自行在官网安装
+| 
 ├── README.md              # 本文件
-├── TODO.md                # 详细每日待办清单
-├──runs/                   # tensorboard训练日志
-├──model/                  # 模型训练保存的checkpoint
-└──handonML.tar.gz         # 项目压缩包，上传服务器用
+
 ```
 
 ---
 
 
-# 📚 学习规划详情
+# 📚 学习规划详情（包含DL）
 
 ## Phase I：机器学习基础 (Week 1)
 
